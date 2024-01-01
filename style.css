@@ -7,6 +7,7 @@
     border: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    list-style: none;
 }
 
 img {
@@ -114,9 +115,10 @@ nav {
 }
 /* end nav */
 
-/* button */
+/*------------------------------------------------------------------------------ button -----------------------------------------------------------------------------*/
 
 .button {
+    display: block;
     border: 0;
     position: relative;
     cursor: pointer;
@@ -124,12 +126,12 @@ nav {
 
 .button .button1 {
     background-color: #1d4ed8;
-    padding: 1rem 3rem;
     position: relative;
     overflow: hidden;
 }
 
 .button a {
+    display: block;
     position: relative;
     text-decoration: none;
     font-size: 1rem;
@@ -137,6 +139,7 @@ nav {
     color: #ece8e1;
     text-transform: uppercase;
     z-index: 2;
+    padding: 20px 70px;
 }
 
 .button::before,
@@ -176,7 +179,7 @@ nav {
     transform: translateX(-5%) skew(-10deg);
 }
 
-/* end button */
+/*------------------------------------------------------------------------ end button ------------------------------------------------------------------------------*/
 
 .container {
     max-width: 1200px;
@@ -208,7 +211,7 @@ header .content h4 {
 header .content h1 {
     color: #fff;
     margin-bottom: 10px;
-    font-size: 3rem;
+    font-size: 2.7rem;
     font-weight: 700;
     line-height: 4rem;
 }
@@ -294,7 +297,9 @@ p {
 
 /* end about */
 
-section .header {
+/*------------------------- Pendidikan ---------------------------  */
+
+.pendidikan .header {
     margin-bottom: 1rem;
     color: #fff;
     text-align: center;
@@ -302,7 +307,7 @@ section .header {
     font-weight: 600;
 }
 
-section .header span {
+.pendidikan .header span, .my-skil h1 span {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #fff;
 }
@@ -311,14 +316,29 @@ section .header span {
     color: transparent;
 }
 
-.skil {
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.riwayat-pendidikan {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
+    margin: 4rem 2rem;
 }
 
-.skil .card {
+.pendidikan .riwayat-pendidikan .card .tk {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.pendidikan .riwayat-pendidikan .card .sd {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.pendidikan .riwayat-pendidikan .card .smp {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.riwayat-pendidikan .card {
     background-color: #272727;
     padding: 1rem;
     border: 2px solid transparent;
@@ -326,12 +346,12 @@ section .header span {
     transition: all 0.3s ease;
 }
 
-.skil .card:hover {
+.riwayat-pendidikan .card:hover {
     background-color: #323232;
     border-color: #fff;
 }
 
-.skil .card span {
+.riwayat-pendidikan .card span {
     display: inline-block;
     background-color:#1d4ed8;
     padding: 2px 9px;
@@ -341,63 +361,105 @@ section .header span {
     border-radius: 5px;
 }
 
-.skil .card h4 {
+.riwayat-pendidikan .card h4 {
     margin-bottom: 0.5rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.skil .card a {
+.riwayat-pendidikan .card a {
     color: #fff;
     transition: all 0.3s ease;
 }
 
-.skil .card a:hover {
+.riwayat-pendidikan .card a:hover {
     color: #1d4ed8;
 }
 
-.skil .card p {
+.riwayat-pendidikan .card p {
     color: #fff;
     margin-bottom: 1rem;
     font-size: 13px;
-    /* text-align: justify; */
+    /* text-align: center; */
+    text-transform: capitalize;
 }
 
-.maps{
-    display: flex;
-    justify-content: center;
-}
+/*------------------------- end Pendidikan ---------------------------  */
 
-.kata {
-    display: flex;
-    justify-content: center;
+
+/* --------------------------- Skil --------------------------------------------------------------- */
+
+.my-skil {
+    width: 55rem;
+    margin: 100px auto 200px;
     color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: #272727;
+    border-radius: 15px;
+
 }
 
-.address {
-    width: 100%;
-    padding: 10px 100px 50px 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.my-skil h1 {
+    text-align: center;
+    font-size: 2.5rem;
 }
 
-.address .text h2 {
-    padding-top: 60px;
+.my-skil h3 {
+    margin: 5px;
 }
 
-.text {
-    color: #fff;
-    padding-bottom: 30px;
-    font-size: 40px;
+.my-skil li {
+    margin: 20px 0;
+    padding: 10px;
 }
 
-.text h2 span {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #fff;
+.bar {
+    background-color: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0. 0, 0.24);
+    transition: all .3s cubic-bezier(.25, .8, .25, .1);
 }
+
+.bar span {
+    text-align: end;
+    /* margin-bottom: 5px; */
+}
+
+.bar:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, #1d4ed8  0%, rgb(103, 120, 252) 100%);
+}
+
+.html {
+    width: 90%;
+    animation: html 2s;
+}
+
+.css {
+    width: 60%;
+    animation: css 2s;
+}
+
+.js {
+    width: 10%;
+    animation: js 2s;
+}
+
+
+/* --------------------------- end skil --------------------------------------------------------------- */
+
+/* -------------------------------------------------------- footer ------------------------------------------- */
 
 footer {
     position: relative;
@@ -466,6 +528,8 @@ footer .colums > a:hover {
     text-align: center;
 }
 
+/* -------------------------------------------------------- end footer ------------------------------------------- */
+
 @media (width < 1200px) {
     .about-text {
         padding-left: 10px;
@@ -473,7 +537,6 @@ footer .colums > a:hover {
 }
 
 @media screen and (max-width: 893px) {
-
     .container {
         max-width: 893px;
     }
@@ -490,6 +553,10 @@ footer .colums > a:hover {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+    .tombol {
+        display: flex;
+        justify-content: center;
+    }
     .about-me img {
         display: flex;
         align-items: center;
@@ -498,8 +565,15 @@ footer .colums > a:hover {
     .about-text {
         text-align: center;
     }
-    .skil {
-        grid-template-columns: repeat(2, 1fr);
+    .about-text p {
+        text-align: justify;
+    }
+    .riwayat-pendidikan {
+        flex-wrap: wrap;
+        margin: 0 2rem;
+    }
+    .my-skil {
+        width: 50rem;
     }
     footer {
         grid-template-columns: 1fr 200px;
@@ -507,9 +581,6 @@ footer .colums > a:hover {
 }
 
 @media screen and (max-width: 600px ) {
-    .skil {
-        grid-template-columns: repeat(1, 1fr);
-    }
 
     .address iframe {
         width: 350px;
@@ -517,6 +588,11 @@ footer .colums > a:hover {
 
     .address .text {
         font-size: 20px;
+    }
+
+    .tombol {
+        display: flex;
+        justify-content: center;
     }
 
     .about-text {
@@ -534,20 +610,49 @@ footer .colums > a:hover {
         font-size: 20px;
     }
     .nav-logo a {
-        font-size: 17px;
+        font-size: 22px;
+        padding-left: 10px;
     }
     .nav-logo {
         padding: 0;
         margin: 0;
     }
+    .my-skil {
+        width: 33rem;
+    }
 }
 
 @media (max-width: 403px) {
-    .icon-follow span {
+    .nav-logo a {
         font-size: 20px;
     }
+    .container {
+        padding: 2.8rem 2rem 10rem 2rem;
+    }
+    header .content h1 {
+        font-size: 24px;
+        line-height: 3rem;
+    }
+    header .content h4 {
+        font-size: 25px;
+    }
+    .button a {
+        font-size: 12px;
+        padding: 15px 40px;
+    }
+    .icon-follow span {
+        font-size: 25px;
+    }
     .icon-follow h3 {
-        font-size: 15px;
+        font-size: 18px;
+        padding: 5px 0 0 10px;
+    }
+    .about-text h2 {
+        font-size: 50px;
+        padding-bottom: 15px;
+    }
+    .about-text p {
+        text-align: center;
     }
     footer {
         font-size: 10px;
@@ -558,8 +663,20 @@ footer .colums > a:hover {
     .socials a span {
         font-size: 10px;
     }
+    .colums a {
+        font-size: 13px;
+    }
+    .tombol {
+        display: flex;
+        justify-content: center;
+    }
+    .tombol .button a {
+        font-size: 1rem;
+        padding: 20px 60px;
+    }
     footer .colum .socials a {
         padding: 1px 12px 5px;
+        margin: 0;
     }
     footer .logo {
         width: 74%;
@@ -567,5 +684,44 @@ footer .colums > a:hover {
     }
     footer .colums h4 {
         margin-top: 8rem;
+    }
+    footer .colums a {
+        margin: 1rem 10px;
+    }
+    .my-skil {
+        width: 20rem;
+    }
+    .js {
+        width: 20%;
+    }
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes js {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 20%;
     }
 }
