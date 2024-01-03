@@ -1,9 +1,11 @@
-const navbar = document.querySelector(".nav-container");
+document.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    console.log(window.scrollY)
-    const windowposition = window.scrollY > 70;
-    navbar.classList.toggle("scrolling-active", windowposition  ) 
+  if (window.scrollY > 74) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
 })
 
 

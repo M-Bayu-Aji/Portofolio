@@ -31,22 +31,30 @@ body {
 /* nav */
 .navbar {
   max-width: 1200px;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #1d4ed8;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 374109;
   margin: 0 auto;
+  transition: .3s;
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar.scrolled {
+  background-color: rgba(.2, 1, 1, 0.5);
+  /* border: 2px solid #1d4ed8; */
+  box-shadow: 3px 3px 5px #111;
+
 }
 
 .navbar .navbar-logo {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
 }
